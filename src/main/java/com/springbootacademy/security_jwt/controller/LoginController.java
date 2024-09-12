@@ -11,7 +11,7 @@ public class LoginController {
 
     @Autowired
     private JwtService jwtService;
-    @CrossOrigin
+    @CrossOrigin(origins = "http://localhost:4200")
 
     //authentication == logging
     @PostMapping({"/authentication"})
