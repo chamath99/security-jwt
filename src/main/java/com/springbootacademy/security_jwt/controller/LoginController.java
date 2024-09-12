@@ -4,16 +4,14 @@ import com.springbootacademy.security_jwt.dto.LoginRequest;
 import com.springbootacademy.security_jwt.dto.LoginResponse;
 import com.springbootacademy.security_jwt.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class LoginController {
 
     @Autowired
     private JwtService jwtService;
+    @CrossOrigin
 
     //authentication == logging
     @PostMapping({"/authentication"})
